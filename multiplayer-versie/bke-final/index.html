@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='nl'>
+
+    <head>
+        <title>Boter, Kaas en Eieren</title>
+
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="img/android-chrome-192x192.png" sizes="192x192">
+        <meta name="msapplication-square70x70logo" content="img/smalltile.png" />
+        <meta name="msapplication-square150x150logo" content="img/mediumtile.png" />
+        <meta name="msapplication-wide310x150logo" content="img/widetile.png" />
+        <meta name="msapplication-square310x310logo" content="img/largetile.png" />
+
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <div id="mainContainer">
+
+            <h1>Boter, Kaas &amp; Eieren</h1>
+
+            <div id="speelveld">
+                <table border="0">
+                    <tr>
+                        <td><img data-cell="0" alt="" title="" src="img/empty.jpg" /></td>
+                        <td><img data-cell="1" alt="" title="" src="img/empty.jpg" /></td>
+                        <td><img data-cell="2" alt="" title="" src="img/empty.jpg" /></td>
+                    </tr>
+                    <tr>
+                        <td><img data-cell="3" alt="" title="" src="img/empty.jpg" /></td>
+                        <td><img data-cell="4" alt="" title="" src="img/empty.jpg" /></td>
+                        <td><img data-cell="5" alt="" title="" src="img/empty.jpg" /></td>
+                    </tr>
+                    <tr>
+                        <td><img data-cell="6" alt="" title="" src="img/empty.jpg" /></td>
+                        <td><img data-cell="7" alt="" title="" src="img/empty.jpg" /></td>
+                        <td><img data-cell="8" alt="" title="" src="img/empty.jpg" /></td>
+                    </tr>
+                </table>
+            </div> <!-- EINDE SPEELVELD CONTAINER -->
+
+            <div id="game-info">
+                <h1>Aan beurt</h1>
+                <div class="timer pull-right">Ronde tijd</div>
+                <table class="players-turn" border="0">
+                    <tr>
+                        <td><img width="25" height="25" alt="" title="" src="img/cross.jpg" /></td>
+                        <td>Speler</td>
+                        <td>1</td>
+                    </tr>
+                </table> <!-- EINDE SPELER AAN ZET TABEL -->
+
+                <h1>Scores</h1>
+
+                <table class="rounds-info">
+                    <tr>
+                        <td><img width="15" height="15" alt="" title="" src="img/cross.jpg" />&nbsp;<span id="name_player_1">Speler 1</span></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><img width="15" height="15" alt="" title="" src="img/circle.jpg" />&nbsp;<span id="name_player_2">Speler 2</span></td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Ronde</td>
+                        <td>0</td>
+                    </tr>
+                </table> <!-- EINDE INFO TABEL -->
+
+                <div class="server-message">
+                    <h6>Server messages</h6>
+                    <div class="game-messages">
+
+                    </div>
+                </div>
+<!--                <button class="game-button">Start spel</button>-->
+
+            </div> <!-- EINDE GAME-INFO CONTAINER -->
+
+        </div> <!-- EINDE MAINCONTAINER -->
+
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/bke.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,280 @@
+/*****************************
+ * FONTS
+ ****************************/
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: PoppinsMedium;
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: PoppinsThin;
+    src: url(../fonts/Poppins-Thin.ttf);
+}
+
+/******************************
+ * RESETS
+ *****************************/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/******************************
+ * GLOBALE VARIABELEN
+ *****************************/
+:root {
+    --clr-primary: #0d0d0d;
+    --clr-secundary: #f2380f;
+    --clr-gray: #f2f2f2;
+    --clr-green: #038c73;
+    --clr-yellow: #f2a007;
+}
+
+/******************************
+ * STYLING
+ *****************************/
+body {
+    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--clr-gray);
+}
+
+h1, h2 {
+    font-family: PoppinsMedium;
+    color: var(--clr-secundary);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.page-container {
+    width: 60vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.page-container > header {
+    margin-bottom: 2em;
+}
+
+.page-container main {
+    display: flex;
+    gap: 2em;
+}
+
+.game-board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 603px;
+    background-color: white;
+}
+
+.game-board img {
+    max-width: 200px;
+    cursor: pointer;
+}
+
+.game-board img:nth-child(1),
+.game-board img:nth-child(2),
+.game-board img:nth-child(4),
+.game-board img:nth-child(5) {
+    border-bottom: 1px solid var(--clr-primary);
+    border-right: 1px solid var(--clr-primary);
+}
+.game-board img:nth-child(3),
+.game-board img:nth-child(6) {
+    border-bottom: 1px solid var(--clr-primary);
+}
+
+.game-board img:nth-child(7), .game-board img:nth-child(8) {
+    border-right: 1px solid var(--clr-primary);
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: white;
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.turn {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.turn header h2,
+.score-info header h2,
+.round-info header h2 {
+    width: 100%;
+    border-bottom: 1px solid var(--clr-secundary);
+}
+
+.turn header .timer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.player-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.player-info__identifier {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.player-info__identifier img {
+    width: 2em;
+    height: 2em;
+}
+
+.player-info p, .round-info p {
+    font-size: 2em;
+}
+
+.round-info__text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.button .game-button {
+    background-color: var(--clr-gray);
+    color: var(--clr-primary);
+    border: 1px solid var(--clr-gray);
+    border-radius: 5px;
+    font-size: 2em;
+    font-family: PoppinsMedium;
+    padding: 4px 6px;
+    box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+}
+
+.button .game-button:hover {
+    border: 1px solid var(--clr-primary);
+    background-color: var(--clr-primary);
+    color: white;
+}
+
+/*************************
+ * DIALOG BOX
+ ************************/
+.dialog-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dialog {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 450px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 6px;
+    padding: 20px;
+    align-items: center;
+    position: relative;
+}
+
+.dialog > button {
+    position: absolute;
+    bottom: 40px;
+}
+
+.dialog > h2 {
+    font-family: Tahoma;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 30px 0 30px 0;
+    padding: 0;
+}
+
+.dialog > h3 {
+    font-family: Tahoma;
+    font-size: 72px;
+    /* font-weight: bold; */
+    margin: 0 0 30px 0;
+    padding: 0;
+    color: green;
+}
+
+.dialog > img {
+    display: inline-block;
+    width: 75px;
+}
+
+.dialog > button {
+    background-color: var(--clr-gray);
+    color: var(--clr-primary);
+    border: 1px solid var(--clr-gray);
+    border-radius: 5px;
+    font-size: 2em;
+    font-family: PoppinsMedium;
+    padding: 4px 6px;
+    box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+}
+
+.dialog > button:hover {
+    border: 1px solid var(--clr-primary);
+    background-color: var(--clr-primary);
+    color: white;
+}
+
+.hide {
+    display: none !important;
+}
